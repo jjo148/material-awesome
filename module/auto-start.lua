@@ -4,7 +4,7 @@ local filesystem = require('gears.filesystem')
 awful.spawn.single_instance({'blueberry-tray'}) -- Bluetooth tray icon
 awful.spawn.single_instance({'xfce4-power-manager'}) -- Power manager
 awful.spawn.single_instance('compton --config ' .. filesystem.get_configuration_dir() .. '/conf/compton.conf')
-awful.spawn.single_instance('feh --bg-scale ~/.config/bspwm/wall.png')
+awful.spawn.single_instance('variety')
 -- To allow gnome tools to ask authentication like pamac
 awful.spawn.single_instance(
   {
