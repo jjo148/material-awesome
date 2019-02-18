@@ -15,7 +15,8 @@ local slider =
 }
 
 watch(
-  'bash -c "free | grep -z Mem.*Swap.*"',
+  --'bash -c "free | grep -z Mem.*Swap.*"',
+  'bash -c "free | grep -z Mem."',
   1,
   function(widget, stdout, stderr, exitreason, exitcode)
     total,

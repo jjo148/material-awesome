@@ -159,7 +159,7 @@ local globalKeys =
   -- Dropdown application
   awful.key(
     {modkey},
-    '`',
+    '\\',
     function()
       toggle_quake()
     end,

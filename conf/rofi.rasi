@@ -39,7 +39,7 @@ configuration {
 	hide-scrollbar:              "true";
 	margin:                      0px;
 	padding:                     0px;
-	font:            "Roboto medium 10";
+	font:            "Roboto medium 14";
 }
 
 window {
@@ -47,7 +47,7 @@ window {
 	anchor:		 west;
 	x-offset: 0px;
 	height:		 100%;
-	width:		 400px;
+	width:		 480px;
 	margin-right: 60px;
 	orientation: horizontal;
 	children:	 [mainbox];
@@ -56,7 +56,7 @@ window {
 mainbox {
 	spacing:  0em;
 	padding: 0px;
-	width:200px;
+	width: 200px;
 	children: [ inputbar, listview, sidebar ];
 	expand: true;
 }
