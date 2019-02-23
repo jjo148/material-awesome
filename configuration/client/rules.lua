@@ -1,15 +1,7 @@
-<<<<<<< HEAD:conf/client/rules.lua
-local awful = require("awful")
-local beautiful = require("beautiful")
-local gears = require("gears")
-local client_keys = require("conf.client.keys")
-local client_buttons = require("conf.client.buttons")
-=======
 local awful = require('awful')
 local gears = require('gears')
 local client_keys = require('configuration.client.keys')
 local client_buttons = require('configuration.client.buttons')
->>>>>>> 8cd624d51ce3d525d38258890d13656ccd7aeb11:configuration/client/rules.lua
 
 -- Rules
 awful.rules.rules = {

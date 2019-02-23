@@ -13,15 +13,6 @@ local function run_once(cmd)
   awful.spawn.with_shell(string.format('pgrep -u $USER -x %s > /dev/null || (%s)', findme, cmd))
 end
 
-os.execute("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)")
-os.execute("xcalib -d :0 /usr/share/color/icc/HUAWEI_MateBook_X_Pro_8550u_LPM139M422A.icm")
-
-awful.spawn.single_instance({'blueberry-tray'}) -- Bluetooth tray icon
-awful.spawn.single_instance({'xfce4-power-manager'}) -- Power manager
-awful.spawn.single_instance('compton --config ' .. filesystem.get_configuration_dir() .. '/conf/compton.conf')
-awful.spawn.single_instance('variety')
-
--- run_once({'pamac-tray'})
 for _, app in ipairs(apps.run_on_start_up) do
   run_once(app)
 end
