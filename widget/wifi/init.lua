@@ -20,7 +20,7 @@ local dpi = require('beautiful').xresources.apply_dpi
 -- Battery 0: Charging, 53%, 00:57:43 until charged
 
 local HOME = os.getenv('HOME')
-local PATH_TO_ICONS = HOME .. '/.config/awesome/widgets/wifi/icons/'
+local PATH_TO_ICONS = HOME .. '/.config/awesome/widget/wifi/icons/'
 local interface = 'wlp60s0'
 local connected = false
 local essid = 'N/A'
@@ -74,7 +74,7 @@ local function grabText()
       function(stdout)
         essid = stdout:match('SSID:(.-)\n')
         if (essid == nil) then
-          essid = 'N/Aaauu!'
+          essid = 'N/A'
         end
       end
     )

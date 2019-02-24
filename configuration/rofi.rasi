@@ -39,15 +39,15 @@ configuration {
 	hide-scrollbar:              "true";
 	margin:                      0px;
 	padding:                     0px;
-	font:            "Roboto medium 14";
+	font:            "Roboto medium 18";
 }
 
 window {
 	location:	 west;
 	anchor:		 west;
-	x-offset: 0px;
+	x-offset: 	 0px;
 	height:		 100%;
-	width:		 480px;
+	width:		 667px;
 	margin-right: 60px;
 	orientation: horizontal;
 	children:	 [mainbox];
@@ -92,10 +92,10 @@ element {
 entry {
 	expand:         true;
 	text-color:     @normal-foreground;
-	background-color: rgb(25, 41, 51);
+	background-color: rgb(26, 26, 26);
 	vertical-align: 1;
-	padding:        12px;
-	font:            "Roboto medium 13";
+	padding:        24px;
+	font:            "Roboto medium 18";
 }
 
 element normal.normal {

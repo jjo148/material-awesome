@@ -14,9 +14,12 @@ return {
     '/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)',
     'xcalib -d :0 /usr/share/color/icc/HUAWEI_MateBook_X_Pro_8550u_LPM139M422A.icm', -- color profile
     'compton --config ' .. filesystem.get_configuration_dir() .. '/conf/compton.conf',
+    'libinput-gestures-setup start',
     'blueberry-tray', -- Bluetooth tray icon
     'xfce4-power-manager', -- Power manager,
-    'variety'
+    'variety', -- background selector
+    'flameshot', -- screenshot tool
+    'xinput set-float-prop "SYNA1D31:00 06CB:CD48 Touchpad" "libinput Accel Speed" 0.2'
   }
 }
 
