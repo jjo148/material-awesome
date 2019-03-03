@@ -6,10 +6,14 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 local modkey = require("configuration.keys.mod").modKey
 local altkey = require("configuration.keys.mod").altKey
 local apps = require("configuration.apps")
+local xrandr = require("xrandr")
 
 -- Key bindings
 local globalKeys =
     awful.util.table.join(
+
+    awful.key({modkey, "Shift"}, "e", function() xrandr.xrandr() end),
+
     -- Hotkeys
     awful.key({modkey}, "F1", hotkeys_popup.show_help, {description = "show help", group = "awesome"}),
     -- Tag browsing
@@ -79,6 +83,14 @@ local globalKeys =
     ),
     awful.key({modkey, "Control"}, "r", _G.awesome.restart, {description = "reload awesome", group = "awesome"}),
     awful.key({modkey, "Control"}, "q", _G.awesome.quit, {description = "quit awesome", group = "awesome"}),
+    awful.key(
+        {modkey, "Shift"},
+        "Return",
+        function()
+            awful.spawn(apps.default.filemanager)
+        end,
+        {destoption = "launch file manager", group = "awesome"}
+    ),
     awful.key(
         {"Control"},
         "Escape",
